@@ -106,7 +106,7 @@ Create a `.env` file or pass via terminal before running.
 Once running, visit:
 
 ```
-http://localhost:8080/docs
+http://54.91.1.171:8080/calculate
 ```
 
 To view Redoc UI (OpenAPI documentation)
