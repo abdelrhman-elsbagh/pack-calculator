@@ -15,8 +15,8 @@ func SetupRouter() *gin.Engine {
 
 	// Set up CORS so the frontend (on localhost:5173) can call the API without issues
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173"}, // Allow requests from Vue dev server
-		AllowMethods:     []string{"POST"},                  // Only POST requests are allowed
+		AllowOrigins:     []string{"*"}, // Allow requests from Vue dev server
+		AllowMethods:     []string{"POST", "GET", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type"},
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: true,
