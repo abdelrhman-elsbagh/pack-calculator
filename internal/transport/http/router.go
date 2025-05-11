@@ -31,15 +31,5 @@ func SetupRouter() *gin.Engine {
 	// Define the main route for the pack calculator
 	r.POST("/calculate", handler.Calculate)
 
-	r.GET("/docs", func(c *gin.Context) {
-		c.Header("Content-Type", "text/html")
-		c.File("./internal/docs/docs.html")
-	})
-
-	r.GET("/docs/openapi.yaml", func(c *gin.Context) {
-		c.Header("Content-Type", "application/yaml")
-		c.File("./internal/docs/openapi.yaml")
-	})
-
 	return r
 }
